@@ -106,7 +106,7 @@ export default function ParametresPage() {
               { label: 'Alertes obligations urgentes (< 7 jours)', defaultChecked: true },
               { label: 'Rappels mensuels compliance', defaultChecked: true },
               { label: 'Nouvelles fonctionnalités EU Company OS', defaultChecked: false },
-              { label: 'Mises à jour Directive 2025/25', defaultChecked: true },
+              { label: 'Mises à jour du cadre européen', defaultChecked: true },
             ].map(n => (
               <label key={n.label} className="flex items-center gap-3 cursor-pointer">
                 <input type="checkbox" defaultChecked={n.defaultChecked} className="w-4 h-4 text-indigo-600 rounded" />

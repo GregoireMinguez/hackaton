@@ -11,7 +11,7 @@ export interface ConfigPays {
   langue_officielle: string
   url_registre: string
   capital_min_sarl: number
-  delai_mise_a_jour: number // always 15 per Directive 2025/25
+  delai_mise_a_jour: number // always 15 per cadre européen
   formes_juridiques: FormeJuridique[]
   // Approximate SVG position (viewBox 500x400) for the EU map
   map_x: number

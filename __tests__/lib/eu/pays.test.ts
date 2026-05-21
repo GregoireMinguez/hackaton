@@ -18,7 +18,7 @@ describe('PAYS_EU — structure', () => {
     })
   })
 
-  it('every country has delai_mise_a_jour of 15 (Directive 2025/25)', () => {
+  it('every country has delai_mise_a_jour of 15 (cadre européen)', () => {
     PAYS_EU.forEach(pays => {
       expect(pays.delai_mise_a_jour).toBe(15)
     })

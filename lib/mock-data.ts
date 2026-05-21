@@ -134,7 +134,7 @@ export const MOCK_DATA: DashboardData = {
           echeance: addDays(today, 7),
           statut: 'a_faire',
           priorite: 'urgente',
-          description: 'Directive EU 2025/25 — délai max 15 jours ouvrables après changement',
+          description: 'Cadre européen — délai max 15 jours ouvrables après changement',
           created_at: '2025-05-10T10:00:00Z',
         },
         {

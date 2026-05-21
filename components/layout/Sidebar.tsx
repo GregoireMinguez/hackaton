@@ -29,7 +29,7 @@ const NAV_MACF = [
 const NAV_BOTTOM = [
   { href: '/equipe', icon: Users, label: 'Équipe & accès' },
   { href: '/parametres', icon: Settings, label: 'Paramètres' },
-  { href: '/guide', icon: BookOpen, label: 'Guide 2025/25' },
+  { href: '/guide', icon: BookOpen, label: 'Guide européen' },
 ]
 
 export default function Sidebar() {
@@ -89,7 +89,7 @@ export default function Sidebar() {
           <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-base">🇪🇺</div>
           <div>
             <div className="text-white font-bold text-sm leading-none">EU Company OS</div>
-            <div className="text-slate-500 text-[10px] mt-0.5">Directive 2025/25</div>
+            <div className="text-slate-500 text-[10px] mt-0.5">Cadre européen</div>
           </div>
         </div>
       </div>
@@ -108,12 +108,12 @@ export default function Sidebar() {
       {/* Main nav */}
       <nav className="flex-1 px-3 py-3 space-y-0.5 overflow-y-auto scrollbar-thin">
         <div className="pb-1">
-          <div className="text-[10px] font-semibold uppercase tracking-widest text-slate-600 px-3">Entités EU · Directive 2025/25</div>
+          <div className="text-[10px] font-semibold uppercase tracking-widest text-slate-600 px-3">Entités EU · Cadre européen</div>
         </div>
         {NAV_ENTITES.map(item => <NavItem key={item.href} {...item} />)}
 
         <div className="pt-3 pb-1">
-          <div className="text-[10px] font-semibold uppercase tracking-widest text-slate-600 px-3">MACF / CBAM · 2023/956</div>
+          <div className="text-[10px] font-semibold uppercase tracking-widest text-slate-600 px-3">MACF / CBAM · Règlement (UE) 2023/956</div>
         </div>
         {NAV_MACF.map(item => <NavItem key={item.href} {...item} />)}
 
@@ -126,11 +126,11 @@ export default function Sidebar() {
       {/* Badges conformité */}
       <div className="px-4 py-3 border-t border-slate-800 space-y-2">
         <div className="bg-indigo-950 rounded-lg px-3 py-2">
-          <div className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider mb-0.5">Directive 2025/25</div>
+          <div className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider mb-0.5">Cadre européen</div>
           <div className="text-[10px] text-slate-400">Entités transfrontalières EU</div>
         </div>
         <div className="bg-emerald-950 rounded-lg px-3 py-2">
-          <div className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider mb-0.5">MACF · 2023/956</div>
+          <div className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider mb-0.5">MACF · Règlement (UE) 2023/956</div>
           <div className="text-[10px] text-slate-400">Déclaration et restitution 30 sept. 2027</div>
         </div>
       </div>

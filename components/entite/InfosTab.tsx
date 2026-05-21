@@ -56,7 +56,7 @@ export default function InfosTab({ entite }: Props) {
             <ExternalLink size={13} />
           </a>
           <p className="text-xs text-indigo-600 mt-1">
-            Délai mise à jour registre (Directive 2025/25) : <strong>{pays.delai_mise_a_jour} jours ouvrables</strong>
+            Délai mise à jour registre (cadre européen) : <strong>{pays.delai_mise_a_jour} jours ouvrables</strong>
           </p>
         </div>
       )}

@@ -94,7 +94,7 @@ export default function EntiteDetailPage() {
                 </span>
                 {hasCertificatEU && (
                   <span className="text-xs font-bold bg-indigo-100 text-indigo-700 px-2.5 py-1 rounded-full flex items-center gap-1">
-                    <Award size={11} /> Conforme EU 2025/25
+                    <Award size={11} /> Conforme au cadre EU
                   </span>
                 )}
               </div>

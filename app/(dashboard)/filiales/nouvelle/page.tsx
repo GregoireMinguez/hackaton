@@ -8,7 +8,7 @@ export default function NouvelleFialePage() {
     <div>
       <Header
         title="Créer une filiale EU"
-        subtitle="Wizard guidé en 6 étapes — Conforme Directive 2025/25"
+        subtitle="Wizard guidé en 6 étapes — Conforme au cadre européen"
         action={
           <Link href="/filiales" className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-800">
             <ChevronLeft size={14} /> Retour

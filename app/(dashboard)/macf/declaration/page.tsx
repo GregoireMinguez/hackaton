@@ -64,7 +64,7 @@ export default function DeclarationPage() {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <CBAMDeclarationDraft xmlns="urn:eu:cbam:annual-declaration:draft" schemaVersion="article-6-mapping-2026">
   <legalBasis>
-    <regulation>Regulation (EU) 2023/956 as amended by Regulation (EU) 2025/2083</regulation>
+    <regulation>Regulation (EU) 2023/956</regulation>
     <reportingYear>2026</reportingYear>
     <submissionDeadline>2027-09-30</submissionDeadline>
     <surrenderDeadline>2027-09-30</surrenderDeadline>
@@ -127,7 +127,7 @@ ${lignes.map(l => `    <goodsItem id="${xmlEscape(l.id)}">
     const content = `DOSSIER VERIFICATEUR MACF 2026
 Lumia Technologies
 
-Base juridique : Reglement (UE) 2023/956 modifie par le Reglement (UE) 2025/2083
+Base juridique : Reglement (UE) 2023/956
 Echeance premiere declaration et restitution : 30 septembre 2027
 Prix officiel disponible a date : T1 2026 = ${prix.toFixed(2)} EUR/tCO2e
 

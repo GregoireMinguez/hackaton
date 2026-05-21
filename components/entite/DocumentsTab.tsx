@@ -36,14 +36,14 @@ function openGenericDoc(doc: Document) {
   @media print { body { margin: 20px; } }
   @page { margin: 15mm; }
 </style></head><body>
-<div class="header"><h1>${doc.nom}</h1><p>${TYPE_LABELS[doc.type] ?? doc.type} · Directive (UE) 2025/25</p></div>
+<div class="header"><h1>${doc.nom}</h1><p>${TYPE_LABELS[doc.type] ?? doc.type} · Cadre européen</p></div>
 <table>
   <tr><td>Type de document</td><td>${TYPE_LABELS[doc.type] ?? doc.type}</td></tr>
   <tr><td>Langue</td><td>${doc.langue?.toUpperCase() ?? 'FR'}</td></tr>
   ${doc.date_emission ? `<tr><td>Date d'émission</td><td>${new Date(doc.date_emission).toLocaleDateString('fr-FR')}</td></tr>` : ''}
   ${doc.date_expiration ? `<tr><td>Date d'expiration</td><td>${new Date(doc.date_expiration).toLocaleDateString('fr-FR')}</td></tr>` : ''}
 </table>
-<div class="footer"><p>Document généré le ${today} · EU Company OS · Conforme Directive (UE) 2025/25</p></div>
+<div class="footer"><p>Document généré le ${today} · EU Company OS · Conforme au cadre européen</p></div>
 <script>setTimeout(() => window.print(), 600)</script>
 </body></html>`
   const blob = new Blob([html], { type: 'text/html' })
@@ -64,7 +64,7 @@ function DocRow({ doc, entiteId }: { doc: Document; entiteId: string }) {
         <div className="flex items-center gap-2 flex-wrap">
           <span className="text-sm font-semibold text-gray-900 truncate">{doc.nom}</span>
           {isCertEU && (
-            <span className="text-[10px] font-bold bg-indigo-100 text-indigo-700 px-1.5 py-0.5 rounded-full">EU 2025/25</span>
+            <span className="text-[10px] font-bold bg-indigo-100 text-indigo-700 px-1.5 py-0.5 rounded-full">Cadre UE</span>
           )}
         </div>
         <div className="flex items-center gap-3 mt-0.5 flex-wrap">

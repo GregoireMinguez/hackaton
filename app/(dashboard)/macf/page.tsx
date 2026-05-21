@@ -47,7 +47,7 @@ export default function MACFPage() {
     <div>
       <Header
         title="MACF / CBAM — Tableau de bord"
-        subtitle="Mécanisme d'Ajustement Carbone aux Frontières · Règlement (UE) 2023/956 modifié par 2025/2083"
+        subtitle="Mécanisme d'Ajustement Carbone aux Frontières · Règlement (UE) 2023/956"
         action={
           <Link href="/macf/declaration"
             className="flex items-center gap-1.5 bg-indigo-600 text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-indigo-700 transition-colors">
@@ -244,7 +244,7 @@ export default function MACFPage() {
             </div>
 
             <div className="bg-eu-dark rounded-xl p-4 text-white">
-              <div className="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-1">Règlement (UE) 2023/956 modifié</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-indigo-400 mb-1">Règlement (UE) 2023/956</div>
               <div className="text-xs text-slate-300 mb-2">6 secteurs couverts en 2026. Exemption annuelle sous 50 t de marchandises MACF.</div>
               <div className="space-y-1">
                 {['Acier & fer', 'Aluminium', 'Ciment', 'Engrais azotés', 'Électricité', 'Hydrogène'].map(s => (

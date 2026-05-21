@@ -36,7 +36,7 @@ const LABELS: Record<string, Record<string, string>> = {
     certNumber: 'N° du certificat',
     issuer: 'Autorité émettrice',
     issuerValue: 'EU Company OS — Registre Numérique Européen',
-    legal: 'Document émis conformément à la Directive (UE) 2025/25 du 19 décembre 2024 relative aux sociétés à responsabilité limitée transfrontalières.\nReconnu de plein droit dans les 27 États membres de l\'Union européenne sans légalisation ni apostille.',
+    legal: 'Document émis conformément au cadre européen des sociétés transfrontalières.\nReconnu de plein droit dans les 27 États membres de l\'Union européenne sans légalisation ni apostille.',
     verify: 'Vérification en ligne :',
   },
   en: {
@@ -56,7 +56,7 @@ const LABELS: Record<string, Record<string, string>> = {
     certNumber: 'Certificate number',
     issuer: 'Issuing authority',
     issuerValue: 'EU Company OS — European Digital Register',
-    legal: 'Document issued pursuant to Directive (EU) 2025/25 of 19 December 2024 on cross-border limited liability companies.\nRecognised in all 27 Member States of the European Union without legalisation or apostille.',
+    legal: 'Document issued pursuant to the European framework for cross-border companies.\nRecognised in all 27 Member States of the European Union without legalisation or apostille.',
     verify: 'Online verification:',
   },
   de: {
@@ -76,7 +76,7 @@ const LABELS: Record<string, Record<string, string>> = {
     certNumber: 'Zertifikat-Nummer',
     issuer: 'Ausstellende Behörde',
     issuerValue: 'EU Company OS — Europäisches Digitalregister',
-    legal: 'Gemäß Richtlinie (EU) 2025/25 vom 19. Dezember 2024 ausgestelltes Dokument über grenzüberschreitende GmbHs.\nIn allen 27 EU-Mitgliedstaaten anerkannt, ohne Legalisierung oder Apostille.',
+    legal: 'Gemäß dem europäischen Rahmen für grenzüberschreitende Gesellschaften ausgestelltes Dokument.\nIn allen 27 EU-Mitgliedstaaten anerkannt, ohne Legalisierung oder Apostille.',
     verify: 'Online-Verifizierung:',
   },
   nl: {
@@ -96,7 +96,7 @@ const LABELS: Record<string, Record<string, string>> = {
     certNumber: 'Certificaatnummer',
     issuer: 'Uitgevende instantie',
     issuerValue: 'EU Company OS — Europees Digitaal Register',
-    legal: 'Document afgegeven krachtens Richtlijn (EU) 2025/25 van 19 december 2024 inzake grensoverschrijdende bv\'s.\nErkend in alle 27 lidstaten van de Europese Unie zonder legalisatie of apostille.',
+    legal: 'Document afgegeven krachtens het Europese kader voor grensoverschrijdende vennootschappen.\nErkend in alle 27 lidstaten van de Europese Unie zonder legalisatie of apostille.',
     verify: 'Online verificatie:',
   },
   es: {
@@ -116,7 +116,7 @@ const LABELS: Record<string, Record<string, string>> = {
     certNumber: 'Número de certificado',
     issuer: 'Autoridad emisora',
     issuerValue: 'EU Company OS — Registro Digital Europeo',
-    legal: 'Documento emitido conforme a la Directiva (UE) 2025/25 de 19 de diciembre de 2024 sobre sociedades de responsabilidad limitada transfronterizas.\nReconocido en los 27 Estados miembros de la Unión Europea sin legalización ni apostilla.',
+    legal: 'Documento emitido conforme al marco europeo de sociedades transfronterizas.\nReconocido en los 27 Estados miembros de la Unión Europea sin legalización ni apostilla.',
     verify: 'Verificación en línea:',
   },
 }
@@ -357,7 +357,7 @@ export default function CertificatPage() {
     <div>
       <Header
         title="Certificat d'Entreprise EU"
-        subtitle="Directive (UE) 2025/25 · Format officiel reconnu dans les 27 États membres"
+        subtitle="Cadre européen des sociétés transfrontalières · Format officiel reconnu dans les 27 États membres"
         action={
           <Link href={`/entites/${id}`} className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-800">
             <ChevronLeft size={14} /> Retour à la fiche
@@ -407,7 +407,7 @@ export default function CertificatPage() {
             <div className="bg-[#003399] rounded-xl p-4 text-white">
               <div className="flex items-center gap-2 mb-2">
                 <ShieldCheck size={16} className="text-yellow-400" />
-                <div className="text-xs font-bold text-yellow-400 uppercase tracking-wider">Directive (UE) 2025/25</div>
+                <div className="text-xs font-bold text-yellow-400 uppercase tracking-wider">Cadre européen des sociétés transfrontalières</div>
               </div>
               <p className="text-xs text-blue-200 leading-relaxed mb-2">
                 Ce certificat est conforme au format standardisé de l'Union européenne. Il est reconnu comme preuve légale d'immatriculation dans les 27 États membres, <strong className="text-white">sans apostille ni légalisation</strong>.

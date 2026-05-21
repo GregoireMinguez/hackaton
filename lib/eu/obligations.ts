@@ -24,11 +24,11 @@ const OBLIGATIONS_PAR_PAYS: Record<string, ObligationTemplate[]> = {
   ],
 }
 
-// EU Directive 2025/25 : applicable à tous les pays membres
+// Cadre européen : applicable à tous les pays membres
 const OBLIGATION_DIRECTIVE_EU: ObligationTemplate = {
   type: 'mise_a_jour_registre',
-  titre: 'Mise à jour registre (Directive EU 2025/25)',
-  description: 'Toute modification doit être déclarée dans les 15 jours ouvrables — art. 12 Directive 2025/25',
+  titre: 'Mise à jour registre (cadre européen)',
+  description: 'Toute modification doit être déclarée dans les 15 jours ouvrables — art. 12 du cadre européen',
   moisDepuisCloture: 0,
   recurrence: 'ponctuelle',
 }

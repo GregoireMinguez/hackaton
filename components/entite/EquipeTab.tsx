@@ -137,7 +137,7 @@ export default function EquipeTab({ representants }: Props) {
 
       <div className="bg-amber-50 border border-amber-100 rounded-xl p-3">
         <p className="text-xs text-amber-800">
-          <strong>Directive EU 2025/25</strong> — Tout changement de représentant légal doit être déclaré au registre dans les 15 jours ouvrables.
+          <strong>Cadre européen</strong> — Tout changement de représentant légal doit être déclaré au registre dans les 15 jours ouvrables.
         </p>
       </div>
     </div>

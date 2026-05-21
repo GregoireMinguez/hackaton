@@ -220,4 +220,4 @@ INSERT INTO obligations_ref (pays, type, titre, mois_depuis_cloture, recurrence)
 ('NL','ag_annuelle','Algemene Vergadering van Aandeelhouders',6,'annuelle'),
 ('NL','depot_comptes','Jaarrekening deponeren (KvK)',6,'annuelle'),
 ('ES','ag_annuelle','Junta General Ordinaria',6,'annuelle'),
-(NULL,'mise_a_jour_registre','Mise à jour registre (Directive EU 2025/25 — 15 jours)',0,'ponctuelle');
+(NULL,'mise_a_jour_registre','Mise à jour registre (cadre européen — 15 jours)',0,'ponctuelle');

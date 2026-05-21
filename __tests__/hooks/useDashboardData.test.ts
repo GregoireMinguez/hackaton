@@ -1,16 +1,14 @@
 import { renderHook, waitFor } from '@testing-library/react'
 import { useDashboardData } from '@/hooks/useDashboardData'
-import { MOCK_DATA } from '@/lib/mock-data'
 
-// NEXT_PUBLIC_SUPABASE_URL is not set in test env → always uses mock data
 describe('useDashboardData()', () => {
-  it('resolves without staying in loading state (mock is synchronous)', async () => {
+  it('resolves without staying in loading state', async () => {
     const { result } = renderHook(() => useDashboardData())
     await waitFor(() => expect(result.current.loading).toBe(false))
     expect(result.current.data).not.toBeNull()
   })
 
-  it('returns mock data when Supabase is not configured', async () => {
+  it('returns an empty dashboard when Supabase is not configured', async () => {
     const { result } = renderHook(() => useDashboardData())
     await waitFor(() => expect(result.current.loading).toBe(false))
     expect(result.current.data).not.toBeNull()
@@ -27,10 +25,12 @@ describe('useDashboardData()', () => {
     expect(Array.isArray(data!.membres)).toBe(true)
   })
 
-  it('matches MOCK_DATA exactly', async () => {
+  it('starts empty when Supabase is not configured', async () => {
     const { result } = renderHook(() => useDashboardData())
     await waitFor(() => expect(result.current.loading).toBe(false))
-    expect(result.current.data).toEqual(MOCK_DATA)
+    expect(result.current.data?.entites).toHaveLength(0)
+    expect(result.current.data?.activity).toHaveLength(0)
+    expect(result.current.data?.membres).toHaveLength(0)
   })
 
   it('has no loading error', async () => {

@@ -49,7 +49,7 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <div className="text-5xl mb-3">🇪🇺</div>
           <h1 className="text-2xl font-bold text-white">EU Company OS</h1>
-          <p className="text-slate-400 text-sm mt-1">Directive (UE) 2025/25 — Droit des Sociétés Numérique</p>
+          <p className="text-slate-400 text-sm mt-1">Cadre européen des sociétés transfrontalières — Droit des Sociétés Numérique</p>
         </div>
 
         <div className="bg-white rounded-2xl p-6 shadow-2xl">

@@ -80,7 +80,7 @@ function buildStatutsHTML(form: FormData, paysConfig: ReturnType<typeof PAYS_EU.
   <div class="doc-header-right">
     <strong>Réf. ${ref}</strong>
     ${dateStr}<br>
-    Conforme Directive (UE) 2025/25
+    Conforme au cadre européen
   </div>
 </div>
 
@@ -102,7 +102,7 @@ function buildStatutsHTML(form: FormData, paysConfig: ReturnType<typeof PAYS_EU.
 </div>
 
 <h2>Article 1 — Forme juridique</h2>
-<p>Il est constitué entre les soussignés une société sous la forme de <strong>${form.forme_juridique}</strong>, régie par la législation en vigueur en ${paysConfig?.nom_fr} et par les présents statuts. La société est également soumise aux dispositions de la Directive (UE) 2025/25 relative à l'exercice transfrontalier des activités commerciales au sein de l'Union Européenne.</p>
+<p>Il est constitué entre les soussignés une société sous la forme de <strong>${form.forme_juridique}</strong>, régie par la législation en vigueur en ${paysConfig?.nom_fr} et par les présents statuts. La société est également soumise au cadre européen relatif à l'exercice transfrontalier des activités commerciales au sein de l'Union Européenne.</p>
 
 <h2>Article 2 — Dénomination sociale</h2>
 <p>La société a pour dénomination sociale : <strong>${form.nom_filiale}</strong>. Dans tous les actes, factures, annonces et publications émanant de la société, la dénomination sociale doit toujours être précédée ou suivie de la forme juridique et du montant du capital.</p>
@@ -115,7 +115,7 @@ function buildStatutsHTML(form: FormData, paysConfig: ReturnType<typeof PAYS_EU.
 
 <h2>Article 4 — Siège social</h2>
 <p>Le siège social est fixé à : <strong>${form.rue}, ${form.cp} ${form.ville}, ${paysConfig?.nom_fr}</strong>.</p>
-<p>Il peut être transféré en tout autre endroit du même pays par décision de la direction, et dans tout autre État membre de l'Union Européenne sous réserve des formalités légales applicables conformément à la Directive (UE) 2025/25.</p>
+<p>Il peut être transféré en tout autre endroit du même pays par décision de la direction, et dans tout autre État membre de l'Union Européenne sous réserve des formalités légales applicables conformément au cadre européen.</p>
 
 <h2>Article 5 — Capital social</h2>
 <p>Le capital social est fixé à la somme de <strong>${parseInt(form.capital).toLocaleString('fr')} euros (${parseInt(form.capital).toLocaleString('fr')} EUR)</strong>. Il est intégralement souscrit et libéré par la société mère ${parentNom}.</p>
@@ -140,7 +140,7 @@ function buildStatutsHTML(form: FormData, paysConfig: ReturnType<typeof PAYS_EU.
 <p>La dissolution de la société peut intervenir à l'expiration de sa durée, par décision des associés ou actionnaires représentant la majorité requise par la loi applicable, ou par décision judiciaire. En cas de dissolution, la société entre en liquidation et conserve sa personnalité morale pour les besoins de celle-ci. Le liquidateur est nommé selon les modalités prévues par la législation de ${paysConfig?.nom_fr}. L'actif net subsistant après apurement du passif est attribué à la société mère ${parentNom}.</p>
 
 <h2>Article 12 — Élection de domicile</h2>
-<p>Pour l'exécution des présents statuts et pour toute notification légale ou judiciaire, la société élit domicile à son siège social : <strong>${form.rue}, ${form.cp} ${form.ville}, ${paysConfig?.nom_fr}</strong>. Toute modification du siège social fait l'objet d'une publication au registre officiel compétent dans un délai de quinze (15) jours ouvrables conformément à la Directive (UE) 2025/25.</p>
+<p>Pour l'exécution des présents statuts et pour toute notification légale ou judiciaire, la société élit domicile à son siège social : <strong>${form.rue}, ${form.cp} ${form.ville}, ${paysConfig?.nom_fr}</strong>. Toute modification du siège social fait l'objet d'une publication au registre officiel compétent dans un délai de quinze (15) jours ouvrables conformément au cadre européen.</p>
 
 <div class="sig-section">
   <div class="sig-box">
@@ -161,7 +161,7 @@ function buildStatutsHTML(form: FormData, paysConfig: ReturnType<typeof PAYS_EU.
 
 <div class="doc-footer">
   <span>Réf. ${ref} — ${form.nom_filiale} — Statuts constitutifs</span>
-  <span>Directive (UE) 2025/25 — Registre : ${paysConfig?.url_registre}</span>
+  <span>Cadre européen — Registre : ${paysConfig?.url_registre}</span>
 </div>
 <script>setTimeout(()=>window.print(),400)</script>
 </body>
@@ -218,12 +218,12 @@ function buildProcurationHTML(form: FormData, paysConfig: ReturnType<typeof PAYS
   <div class="eu-header-right">
     <div class="ref">${ref}</div>
     <div>${dateStr}</div>
-    <div>Directive (UE) 2025/25</div>
+    <div>Cadre européen</div>
   </div>
 </div>
 
 <div class="directive-badge">
-  ✓ Ce document est établi conformément à l'article 8 de la Directive (UE) 2025/25 et est reconnu sans apostille dans l'ensemble des 27 États membres de l'Union Européenne.
+  ✓ Ce document est établi conformément au cadre européen et est reconnu sans apostille dans l'ensemble des 27 États membres de l'Union Européenne.
 </div>
 
 <h2>Mandant</h2>
@@ -259,7 +259,7 @@ function buildProcurationHTML(form: FormData, paysConfig: ReturnType<typeof PAYS
 <h2>Territoire et durée</h2>
 <p><strong>Territoire d'exercice :</strong> ${paysConfig?.emoji ?? ''} ${paysConfig?.nom_fr} — Registre : ${paysConfig?.url_registre}</p>
 <p><strong>Durée de validité :</strong> La présente procuration est valable pour une durée de <strong>six (6) mois</strong> à compter de sa date de signature, soit jusqu'au <strong>${expiry}</strong>, sauf révocation anticipée notifiée par écrit au Mandataire.</p>
-<p><strong>Validité transfrontalière :</strong> Conformément à l'article 8 de la Directive (UE) 2025/25, la présente procuration électronique est reconnue de plein droit dans l'ensemble des États membres de l'Union Européenne sans nécessité d'apostille ni de légalisation.</p>
+<p><strong>Validité transfrontalière :</strong> Conformément au cadre européen, la présente procuration électronique est reconnue de plein droit dans l'ensemble des États membres de l'Union Européenne sans nécessité d'apostille ni de légalisation.</p>
 
 <div class="sig-section">
   <div class="sig-box">
@@ -280,7 +280,7 @@ function buildProcurationHTML(form: FormData, paysConfig: ReturnType<typeof PAYS
 
 <div class="doc-footer">
   <span>Réf. ${ref} — Procuration Numérique EU — ${form.nom_filiale}</span>
-  <span>Directive (UE) 2025/25, Art. 8 — Valide sans apostille dans l'UE</span>
+  <span>Cadre européen, Art. 8 — Valide sans apostille dans l'UE</span>
 </div>
 <script>setTimeout(()=>window.print(),400)</script>
 </body>
@@ -639,13 +639,13 @@ export default function WizardFiliale() {
         {step === 4 && (
           <div>
             <h3 className="font-semibold text-gray-900 mb-0.5">Statuts générés automatiquement</h3>
-            <p className="text-sm text-gray-500 mb-4">Conformes à la législation {paysConfig?.nom_fr} — Directive (UE) 2025/25</p>
+            <p className="text-sm text-gray-500 mb-4">Conformes à la législation {paysConfig?.nom_fr} — Cadre européen</p>
             <div className="bg-gray-50 rounded-xl p-4 font-mono text-xs text-gray-700 leading-relaxed max-h-64 overflow-y-auto border border-gray-100">
               <p className="font-bold mb-1.5 text-gray-900 font-sans not-italic">STATUTS DE {form.nom_filiale.toUpperCase()}</p>
               <p className="mb-0.5">Forme : {form.forme_juridique} — Capital : {parseInt(form.capital).toLocaleString('fr')} EUR</p>
               <p className="mb-2">Siège : {form.rue}, {form.cp} {form.ville}, {paysConfig?.nom_fr}</p>
               <p className="font-bold mb-0.5">ART. 1 — FORME</p>
-              <p className="mb-2 text-gray-500">Société constituée sous forme de {form.forme_juridique}, régie par la législation de {paysConfig?.nom_fr} et la Directive (UE) 2025/25.</p>
+              <p className="mb-2 text-gray-500">Société constituée sous forme de {form.forme_juridique}, régie par la législation de {paysConfig?.nom_fr} et le cadre européen.</p>
               <p className="font-bold mb-0.5">ART. 2 — DÉNOMINATION</p>
               <p className="mb-2 text-gray-500">{form.nom_filiale}</p>
               <p className="font-bold mb-0.5">ART. 3 — OBJET</p>
@@ -671,7 +671,7 @@ export default function WizardFiliale() {
         {step === 5 && (
           <div>
             <h3 className="font-semibold text-gray-900 mb-0.5">Procuration numérique EU</h3>
-            <p className="text-sm text-gray-500 mb-4">Directive (UE) 2025/25 — Art. 8 — Sans apostille requise</p>
+            <p className="text-sm text-gray-500 mb-4">Cadre européen — Art. 8 — Sans apostille requise</p>
 
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-4">
               <div className="text-xs font-bold text-blue-800 mb-2 uppercase tracking-wider">EU Digital Power of Attorney</div>
@@ -686,7 +686,7 @@ export default function WizardFiliale() {
 
             <div className="bg-indigo-50 border border-indigo-100 rounded-xl p-3 mb-4">
               <p className="text-xs text-indigo-700">
-                <strong>Art. 8 Directive 2025/25 :</strong> Valide sans apostille dans les 27 États membres de l'UE.
+                <strong>Art. 8 Cadre européen :</strong> Valide sans apostille dans les 27 États membres de l'UE.
               </p>
             </div>
 
@@ -762,7 +762,7 @@ export default function WizardFiliale() {
                   `Soumettre au registre : ${paysConfig?.url_registre}`,
                   'Ouvrir un compte bancaire professionnel',
                   'S\'immatriculer auprès des autorités fiscales locales',
-                  'Générer le Certificat EU 2025/25',
+                  'Générer le certificat EU',
                 ].map((s, i) => (
                   <li key={i} className="flex items-start gap-2 text-xs text-gray-600">
                     <span className="font-bold text-gray-400 flex-shrink-0 w-4">{i + 1}.</span>{s}

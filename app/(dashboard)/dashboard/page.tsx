@@ -167,7 +167,7 @@ function MACFSummary() {
 function DirectiveBadge() {
   return (
     <div className="bg-eu-dark rounded-xl p-5 text-white">
-      <div className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Directive (UE) 2025/25</div>
+      <div className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Cadre européen des sociétés transfrontalières</div>
       <h3 className="text-base font-semibold mb-3">Votre checklist conformité</h3>
       <div className="space-y-2">
         {[

@@ -2,10 +2,23 @@
 
 import { useState, useEffect } from 'react'
 import type { DashboardData } from '@/lib/eu/types'
-import { MOCK_DATA } from '@/lib/mock-data'
 import { getLocalEntites } from '@/lib/local-store'
 
-const USE_MOCK = !process.env.NEXT_PUBLIC_SUPABASE_URL
+const EMPTY_DASHBOARD_DATA: DashboardData = {
+  organisation: {
+    id: '',
+    owner_user_id: '',
+    nom: '',
+    plan_abonnement: 'starter',
+    created_at: '',
+    updated_at: '',
+  },
+  entites: [],
+  activity: [],
+  membres: [],
+}
+
+const HAS_SUPABASE = Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
 
 export function useDashboardData() {
   const [data, setData] = useState<DashboardData | null>(null)
@@ -13,32 +26,29 @@ export function useDashboardData() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (USE_MOCK) {
-      const localEntites = getLocalEntites()
-      setData({
-        ...MOCK_DATA,
-        entites: [...MOCK_DATA.entites, ...localEntites],
-      })
+    const localEntites = getLocalEntites()
+
+    if (!HAS_SUPABASE) {
+      setData({ ...EMPTY_DASHBOARD_DATA, entites: localEntites })
       setLoading(false)
       return
     }
 
     async function fetchData() {
-      const localEntites = getLocalEntites()
       try {
         const { createClient } = await import('@/lib/supabase/client')
         const { fetchDashboardData } = await import('@/lib/supabase/fetchDashboardData')
         const supabase = createClient()
         const dashboardData = await fetchDashboardData(supabase)
         if (!dashboardData) {
-          setData({ ...MOCK_DATA, entites: [...MOCK_DATA.entites, ...localEntites] })
+          setData({ ...EMPTY_DASHBOARD_DATA, entites: localEntites })
           setLoading(false)
           return
         }
         setData({ ...dashboardData, entites: [...dashboardData.entites, ...localEntites] })
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Erreur de chargement')
-        setData({ ...MOCK_DATA, entites: [...MOCK_DATA.entites, ...localEntites] })
+        setData({ ...EMPTY_DASHBOARD_DATA, entites: localEntites })
       } finally {
         setLoading(false)
       }

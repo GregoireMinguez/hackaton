@@ -4,9 +4,9 @@ import { ExternalLink } from 'lucide-react'
 const SECTIONS = [
   {
     icon: '📜',
-    titre: 'La Directive (UE) 2025/25 en bref',
+    titre: 'Le cadre européen des sociétés transfrontalières en bref',
     contenu: [
-      { q: 'Qu\'est-ce que la Directive 2025/25 ?', r: 'Adoptée le 19 décembre 2024, elle digitalise le droit des sociétés européen. Elle crée un cadre unifié pour les documents d\'entreprise dans les 27 États membres. Entrée en vigueur le 30 janvier 2025, applicable à partir du 31 juillet 2028.' },
+      { q: 'Quel est ce cadre ?', r: 'Le projet présente un cadre unifié pour les documents d\'entreprise dans les 27 États membres et la circulation transfrontalière des sociétés.' },
       { q: 'Qu\'est-ce que le Certificat d\'Entreprise EU ?', r: 'Un document officiel standardisé, disponible dans les 24 langues de l\'UE, reconnu comme preuve suffisante d\'immatriculation par toutes les autorités publiques européennes. Il contient les représentants légaux, les statuts et le capital.' },
       { q: 'Qu\'est-ce que la Procuration Numérique EU ?', r: 'Une procuration digitale valable sans apostille dans toute l\'Union pour la création de filiales, l\'enregistrement de succursales et les fusions transfrontalières.' },
       { q: 'Qu\'est-ce que le principe "Once-Only" ?', r: 'Les entreprises ne fournissent plus plusieurs fois les mêmes données — les administrations se les transmettent automatiquement entre elles. Particulièrement bénéfique pour les PME et les startups multi-pays.' },
@@ -17,7 +17,7 @@ const SECTIONS = [
     titre: 'Calendrier d\'application',
     timeline: [
       { date: '19 déc. 2024', label: 'Adoption de la directive', status: 'done' },
-      { date: '30 janv. 2025', label: 'Entrée en vigueur officielle', status: 'done' },
+      { date: '30 janv.', label: 'Entrée en vigueur officielle', status: 'done' },
       { date: 'Janv. 2026', label: 'Lancement EU Inc. (28ème régime)', status: 'active' },
       { date: '31 juil. 2027', label: 'Deadline transposition nationale', status: 'next' },
       { date: '31 juil. 2028', label: 'Application effective — certificat EU disponible', status: 'future' },
@@ -46,13 +46,13 @@ const SECTIONS = [
 export default function GuidePage() {
   return (
     <div>
-      <Header title="Guide Directive (UE) 2025/25" subtitle="Tout comprendre sur la révolution du droit des sociétés numérique" />
+      <Header title="Guide cadre européen" subtitle="Tout comprendre sur la révolution du droit des sociétés numérique" />
 
       <div className="p-6 max-w-3xl space-y-6">
         {/* Hero banner */}
         <div className="bg-eu-dark rounded-2xl p-6 text-white">
           <div className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-2">Ressource officielle</div>
-          <h2 className="text-xl font-bold mb-2">Directive (UE) 2025/25 du Parlement Européen</h2>
+          <h2 className="text-xl font-bold mb-2">Cadre européen des sociétés transfrontalières</h2>
           <p className="text-slate-400 text-sm mb-4">
             La première directive européenne à digitaliser intégralement le droit des sociétés. Elle révolutionne la façon dont les startups s'expandent dans les 27 États membres.
           </p>
